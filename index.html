@@ -17,12 +17,68 @@
     <header>
         <!-- place navbar here -->
     </header>
-    <main>
-        <h1>How to do CPR</h1>
+    <main class="container text-center mt-5">
+        <h1 class="mb-4">CPR Instructions</h1>
+
+        <div class="row align-items-center">
+            <div class="col-md-3">
+                <img src="imgs/Red-Cross-Emblem.png" alt="CPR Image Left" class="cpr-image">
+            </div>
+            <div class="col-md-6">
+                <div id="ageSelection">
+                    <h3>Select Age Group</h3>
+                    <button class="btn btn-primary m-2" onclick="startCPRGuide(0)">Ages 0-5</button>
+                    <button class="btn btn-info m-2" onclick="startCPRGuide(1)">Ages 5-10</button>
+                    <button class="btn btn-success m-2" onclick="startCPRGuide(2)">Ages 10+</button>
+                </div>
+
+                <div id="instructionBox" class="mt-4 d-none">
+                    <h4 id="ageRangeLabel"></h4>
+                    <div id="stepDisplay" class="cpr-step"></div>
+                    <button id="prevBtn" class="btn btn-secondary m-2" onclick="prevStep()">Previous</button>
+                    <button id="nextBtn" class="btn btn-secondary m-2" onclick="nextStep()">Next</button>
+                    <div class="mt-3">
+                        <button class="btn btn-danger" onclick="restartCPRGuide()">Back to Age Selection</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <img src="imgs/blue-cross-blue-shield-logo-vector.webp" alt="CPR Image Right" class="cpr-image">
+            </div>
+        </div>
     </main>
-    <footer>
-        <!-- place footer here -->
-    </footer>
+
+
+    <section class="">
+        <!-- Footer -->
+        <footer class="text-center text-white fixed-bottom" style="background-color: #0a4275;">
+            <!-- Grid container -->
+            <div class="container p-4 pb-0">
+                <!-- Section: CTA -->
+                <section class="">
+                    <p class="d-flex justify-content-center align-items-center">
+                        <span class="me-3">Click Here for more information!</span>
+                        <a href="https://www.redcross.org/take-a-class/cpr/performing-cpr/cpr-steps" target="new-tab">
+                            <button data-mdb-ripple-init type="button" class="btn btn-outline-light btn-rounded">
+                                Learn more!
+                            </button> </a>
+                    </p>
+                </section>
+                <!-- Section: CTA -->
+            </div>
+            <!-- Grid container -->
+
+            <!-- Copyright -->
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                © 2020 Copyright:
+                <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+            </div>
+            <!-- Copyright -->
+        </footer>
+        <!-- Footer -->
+    </section>
+
+
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
