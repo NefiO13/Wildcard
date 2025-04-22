@@ -5,9 +5,10 @@ const ageLabels = ["Ages 0-5 (Infants)", "Ages 5-10 (Children)", "Ages 10+ (Teen
 const steps = document.querySelectorAll('.step');
 const prevBtn = document.getElementById('prev-btn');
 const nextBtn = document.getElementById('next-btn');
+const startCPRInfant = document.getElementById('Ages 0-5 (Infants)')
+const startCPRChild = document.getElementById('Ages 5-10 (Children)')
+const startCPRAdult = document.getElementById('Ages 10+ (Teens &Adults)')
 let currentStep = 0;
-
-
 
 function startCPRGuide(ageGroupIndex) {
     currentAgeGroup = ageGroupIndex;
@@ -18,7 +19,9 @@ function startCPRGuide(ageGroupIndex) {
     updateStep();
 }
 
-
+function startCPRInfant(step) {
+    document.getElementById('Ages 0-5 (Infants)').textContent = `CPR for Infants`
+}
 
 function showStep(index) {
     steps.forEach(step => step.style.display = 'none');
@@ -36,22 +39,6 @@ nextBtn.addEventListener('click', () => {
 });
 
 showStep(currentStep);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 function restartCPRGuide() {

@@ -14,5 +14,15 @@ body {
 
 h1{
     margin-top: 15%;
+    font-family: "adso", sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        font-size: 124px;
 }
 
+h3{
+    font-family: "economica", sans-serif;
+        font-weight: 400;
+        font-size: 48px;
+        font-style: italic;
+}
