@@ -21,6 +21,8 @@ function startCPRGuide(ageGroupIndex) {
 
 function startCPRInfant(step) {
     document.getElementById('Ages 0-5 (Infants)').textContent = `CPR for Infants`
+    currentStep = 0
+
 }
 
 function showStep(index) {
