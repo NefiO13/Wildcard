@@ -30,53 +30,64 @@ let currentStepIndex = [0, 0, 0];
 
 
 
-const steps = document.querySelectorAll('.step');
-const prevBtn = document.getElementById('prev-btn');
-const nextBtn = document.getElementById('next-btn');
-const instructionBox0 = document.getElementById('Ages 0-5 (Infants)')
-const instructionBox1 = document.getElementById('Ages 5-10 (Children)')
-const instructionBox2 = document.getElementById('Ages 10+ (Teens &Adults)')
-let currentStep = 0;
+cprInstructions.forEach((group, groupIndex) => {
+    console.log(`CPR Steps for Group ${groupIndex}:`);
+    group.forEach((step, stepIndex) => {
+        console.log(`${stepIndex + 1}. ${step}`);
+    });
+});
 
 function startCPRGuide(ageGroupIndex) {
     document.getElementById('ageSelection').classList.add('d-none');
     for (let i = 0; i < 3; i++) {
-        document.getElementById(`instructionBox${i}`).classList.add('d-none')
+        document.getElementById(`instructionBox${i}`).classList.add('d-none');
         document.getElementById(`stepDisplay${i}`).textContent = '';
-        currentStepIndex[i] = 0
-        document.getElementById('backBtn').classList.add('d-none')
+        currentStepIndex[i] = 0;
+        document.getElementById(`backButton${i}`).classList.add('d-none');
     }
-    document.getElementById(`instructionBox${ageGroupIndex}`).classList.remove('d-none')
+    document.getElementById(`instructionBox${ageGroupIndex}`).classList.remove('d-none');
     updateStep(ageGroupIndex);
 }
 
 function updateStep(group) {
-    const prevBtn = document.getElementById('prevBtn')
-    const nextBtn = document.getElementById('nextBtn')
-    const backBtn = document.getElementById('backBtn')
+    let stepText = cprInstructions[group][currentStepIndex[group]] || '';
+    document.getElementById(`stepDisplay${group}`).textContent = stepText;
+
+    const nextButton = document.querySelector(`#instructionBox${group} button[onclick="nextStep(${group})"]`);
+    const prevButton = document.querySelector(`#instructionBox${group} button[onclick="prevStep(${group})"]`);
+    const backButton = document.getElementById(`backButton${group}`);
+
+    nextButton.classList.remove('d-none');
+    prevButton.classList.remove('d-none');
+    backButton.classList.add('d-none');
+
+    if (currentStepIndex[group] === 0) {
+        prevButton.classList.add('d-none');
+    }
+    if (currentStepIndex[group] === cprInstructions[group].length - 1) {
+        nextButton.classList.add('d-none');
+        backButton.classList.remove('d-none');
+    }
 }
 
-
-
-function showStep(index) {
-    steps.forEach(step => step.style.display = 'none');
-    steps[index].style.display = 'block';
+function nextStep(group) {
+    if (currentStepIndex[group] < cprInstructions[group].length - 1) {
+        currentStepIndex[group]++;
+        updateStep(group);
+    }
 }
 
-prevBtn.addEventListener('click', () => {
-    currentStep = Math.max(0, currentStep - 1);
-    showStep(currentStep);
-});
-
-nextBtn.addEventListener('click', () => {
-    currentStep = Math.min(steps.length - 1, currentStep + 1);
-    showStep(currentStep);
-});
-
-showStep(currentStep);
-
+function prevStep(group) {
+    if (currentStepIndex[group] > 0) {
+        currentStepIndex[group]--;
+        updateStep(group);
+    }
+}
 
 function restartCPRGuide() {
-    document.getElementById('instructionBox').classList.add('d-none');
+    for (let i = 0; i < 3; i++) {
+        document.getElementById(`instructionBox${i}`).classList.add('d-none');
+        currentStepIndex[i] = 0;
+    }
     document.getElementById('ageSelection').classList.remove('d-none');
 }
