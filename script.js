@@ -2,7 +2,7 @@ const infantInstructions = [
     "Check for responsiveness (tap and shout).",
     "Call emergency services or ask someone to call.",
     "Give 5 rescue back blows with the palm of your hand.",
-    "If unresponsive, perform 30 chest compressions using two fingers.",
+    "If unresponsive, perform 30 chest compressions using two fingers below the nipple line.",
     "Alternate 5 back blows and 30 compressions until help arrives."
 ];
 
