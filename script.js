@@ -28,7 +28,21 @@ const cprInstructions = [infantInstructions, childInstructions, adultInstruction
 
 let currentStepIndex = [0, 0, 0];
 
+//changes pictures as the next or previous button is clicked.\\
+const images = [
+    ["imgs/infant1.jpg", "imgs/infant2.jpg", "imgs/infant3.jpg", "infant4.jpg", "infant5.jpg"],
+    ["child1.jpg", "child2.jpg", "child3.jpg", "child4.jpg", "child5.jpg", "child6.jpg", "child7.jpg"],
+    ["adult1.jpg", "adult2.jpg", "adult3.jpg", "adult4.jpg", "adult5.jpg"]
+];
 
+function updateImages(group) {
+    let step = currentStepIndex[group];
+    document.getElementById("leftImage").src = images[group][step % images[group].length];
+    document.getElementById("rightImage").src = images[group][step % images[group].length];
+}
+
+
+//This allows each step to be displayed and called one at a time. 
 
 cprInstructions.forEach((group, groupIndex) => {
     console.log(`CPR Steps for Group ${groupIndex}:`);
@@ -36,6 +50,7 @@ cprInstructions.forEach((group, groupIndex) => {
         console.log(`${stepIndex + 1}. ${step}`);
     });
 });
+
 
 function startCPRGuide(ageGroupIndex) {
     document.getElementById('ageSelection').classList.add('d-none');
@@ -68,6 +83,7 @@ function updateStep(group) {
         nextButton.classList.add('d-none');
         backButton.classList.remove('d-none');
     }
+    updateImages(group);
 }
 
 function nextStep(group) {
@@ -90,4 +106,6 @@ function restartCPRGuide() {
         currentStepIndex[i] = 0;
     }
     document.getElementById('ageSelection').classList.remove('d-none');
+    document.getElementById("leftImage").src = "imgs/Red-Cross-Emblem.png";
+    document.getElementById("rightImage").src = "imgs/blue-cross-blue-shield-logo-vector.webp";
 }
