@@ -39,8 +39,8 @@ let currentStepIndex = [0, 0, 0];
 
 //changes pictures as the next or previous button is clicked.\\
 const images = [
-    ["imgs/infant1.jpg", "imgs/infant2.jpg", "imgs/infant3.jpg", "infant4.jpg", "infant5.jpg", "infant6.jpg"],
-    ["child1.jpg", "child2.jpg", "imgs/infant2.jpg", "child4.jpg", "child5.jpg", "child6.jpg", "child7.jpg", "child8.jpg", "child9.jpg"],
+    ["imgs/infant1.jpg", "imgs/infant2.jpg", "imgs/infant3.jpg", "imgs/infant4.jpeg", "imgs/infant5.jpeg", "imgs/infant6.png"],
+    ["imgs/child1.jpg", "imgs/child2.jpg", "imgs/infant2.jpg", "child4.jpg", "child5.jpg", "child6.jpg", "child7.jpg", "child8.jpg", "child9.jpg"],
     ["adult1.jpg", "imgs/infant2.jpg", "adult3.jpg", "adult4.jpg", "adult5.jpg"]
 ];
 
