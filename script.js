@@ -41,7 +41,7 @@ let currentStepIndex = [0, 0, 0];
 const images = [
     ["imgs/infant1.jpg", "imgs/infant2.jpg", "imgs/infant3.jpg", "imgs/infant4.jpeg", "imgs/infant5.jpeg", "imgs/infant6.png"],
     ["imgs/child1.jpg", "imgs/child2.jpg", "imgs/infant2.jpg", "imgs/child4.jpg", "imgs/child5.png", "imgs/child6.png", "imgs/child7.jpg", "imgs/child6.png", "imgs/child8.jpg", "imgs/child9.jpg", "imgs/infant6.png"],
-    ["imgs/adult1.jpg", "imgs/infant2.jpg", "imgs/adult3.jpg", "adult4.jpg", "adult5.jpg"]
+    ["imgs/adult1.jpg", "imgs/infant2.jpg", "imgs/adult3.jpg", "imgs/adult4.jpg", "imgs/child8.jpg", "imgs/child9.jpg"]
 ];
 
 //sizes the images
