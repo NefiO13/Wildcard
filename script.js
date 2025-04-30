@@ -16,7 +16,7 @@ const childInstructions = [
     "Open the airway to a slightly past-neutral position using the head-tilt/chin-lift technique",
     "Blow into the child or baby’s mouth for about 1 second",
     "If the first breath does not cause the chest to rise, retilt the head and ensure a proper seal before giving the second breath. If the second breath does not make the chest rise, an object may be blocking the airway",
-    "Place the heel of one hand in the center of the child’s chest, with your other hand on top and your fingers interlaced. Give 30 chest compressions.",
+    "Place the heel of one hand in the center of the child’s chest, with your other hand on top and your fingers interlaced. (If the child is too small, you are allowed to use one hand to give compressions) Give 30 chest compressions.",
     "Give 2 rescue breaths.",
     "Give 5 cycles of 30 compressions and 2 breaths within 2 minutes",
     "Repeat compressions and breaths until help arrives.",
@@ -40,8 +40,8 @@ let currentStepIndex = [0, 0, 0];
 //changes pictures as the next or previous button is clicked.\\
 const images = [
     ["imgs/infant1.jpg", "imgs/infant2.jpg", "imgs/infant3.jpg", "imgs/infant4.jpeg", "imgs/infant5.jpeg", "imgs/infant6.png"],
-    ["imgs/child1.jpg", "imgs/child2.jpg", "imgs/infant2.jpg", "child4.jpg", "child5.jpg", "child6.jpg", "child7.jpg", "child8.jpg", "child9.jpg"],
-    ["adult1.jpg", "imgs/infant2.jpg", "adult3.jpg", "adult4.jpg", "adult5.jpg"]
+    ["imgs/child1.jpg", "imgs/child2.jpg", "imgs/infant2.jpg", "imgs/child4.jpg", "imgs/child5.png", "imgs/child6.png", "imgs/child7.jpg", "imgs/child6.png", "imgs/child8.jpg", "imgs/child9.jpg", "imgs/infant6.png"],
+    ["imgs/adult1.jpg", "imgs/infant2.jpg", "imgs/adult3.jpg", "adult4.jpg", "adult5.jpg"]
 ];
 
 //sizes the images
