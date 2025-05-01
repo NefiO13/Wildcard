@@ -47,7 +47,7 @@ const images = [
 //sizes the images
 function updateImages(group) {
     let step = currentStepIndex[group];
-    document.getElementById("leftImage").src = images[group][step % images[group].length];
+    document.getElementById("leftImage ").src = images[group][step % images[group].length];
     document.getElementById("rightImage").src = images[group][step % images[group].length];
 }
 

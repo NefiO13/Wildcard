@@ -27,6 +27,11 @@ h3{
         font-style: italic;
 }
 
+h4{
+    font-family: "forma-djr-micro", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+}
 .prevStep-btn{
     display: inline-block;
         padding: 10px 24px;
@@ -51,18 +56,18 @@ h3{
 }
 
 .nextStep-btn:active {
-    box-shadow: 0 5px #bb3333;
+    box-shadow: 0 5px #146e41;
     transform: translateY(4px);
 }
 
 .prevStep-btn{
-    background-color: bisque;
+    background-color: rgb(139, 33, 38);
     color:beige;
     border: 2px;
 }
 
 .nextStep-btn {
-    background-color: bisque;
-    color: beige;
+    background-color: rgb(11, 78, 33);
+    color: rgb(234, 238, 212);
     border: 2px;
 }
