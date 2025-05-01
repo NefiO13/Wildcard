@@ -26,3 +26,43 @@ h3{
         font-size: 48px;
         font-style: italic;
 }
+
+.prevStep-btn{
+    display: inline-block;
+        padding: 10px 24px;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        box-shadow: 0 9px #999;
+}
+
+.prevStep-btn:active{
+    box-shadow: 0 5px #bb3333;
+    transform: translateY(4px);
+}
+
+.nextStep-btn {
+    display: inline-block;
+    padding: 10px 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 9px #999;
+}
+
+.nextStep-btn:active {
+    box-shadow: 0 5px #bb3333;
+    transform: translateY(4px);
+}
+
+.prevStep-btn{
+    background-color: bisque;
+    color:beige;
+    border: 2px;
+}
+
+.nextStep-btn {
+    background-color: bisque;
+    color: beige;
+    border: 2px;
+}
