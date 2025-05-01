@@ -4,7 +4,7 @@ body {
 
 .cpr-step {
     font-size: 1.2rem;
-    margin: 10px 0;
+    margin: 25px 0;
 }
 
 .cpr-image {
@@ -31,6 +31,8 @@ h4{
     font-family: "forma-djr-micro", sans-serif;
         font-weight: 400;
         font-style: normal;
+        font-size:32px;
+        margin-top: 5%;
 }
 .prevStep-btn{
     display: inline-block;
@@ -71,3 +73,8 @@ h4{
     color: rgb(234, 238, 212);
     border: 2px;
 }
+
+#ageSelection{
+    margin-top: 15%;
+}
+
