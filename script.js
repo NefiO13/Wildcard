@@ -63,7 +63,10 @@ cprInstructions.forEach((group, groupIndex) => {
 
 //the "home"page. This allows the home page turn into each instruction box
 function startCPRGuide(ageGroupIndex) {
-    document.getElementById('ageSelection').classList.add('d-none');
+    document.getElementById('ageSelection').classList.add('d-none')
+    document.getElementById('titleContainer').classList.add('d-none')
+    document.getElementById('pageTitle').classList.add('invisible')
+    docudocument.getElementById('titleSpacer').style.display = 'block'
     for (let i = 0; i < 3; i++) {
         document.getElementById(`instructionBox${i}`).classList.add('d-none');
         document.getElementById(`stepDisplay${i}`).textContent = '';
@@ -71,6 +74,7 @@ function startCPRGuide(ageGroupIndex) {
         document.getElementById(`backButton${i}`).classList.add('d-none');
     }
     document.getElementById(`instructionBox${ageGroupIndex}`).classList.remove('d-none');
+
     updateStep(ageGroupIndex);
 }
 //changes each step based on the instruction box and list of instructions being called
@@ -81,6 +85,7 @@ function updateStep(group) {
     const nextButton = document.querySelector(`#instructionBox${group} button[onclick="nextStep(${group})"]`);
     const prevButton = document.querySelector(`#instructionBox${group} button[onclick="prevStep(${group})"]`);
     const backButton = document.getElementById(`backButton${group}`);
+
 
     nextButton.classList.remove('d-none');
     prevButton.classList.remove('d-none');
@@ -117,6 +122,9 @@ function restartCPRGuide() {
         currentStepIndex[i] = 0;
     }
     document.getElementById('ageSelection').classList.remove('d-none');
+    document.getElementById('titleContainer').classList.remove('d-none')
+    document.getElementById('pageTitle').classList.remove('invisible')
+    document.getElementById('titleSpacer').style.display = 'none'
     document.getElementById("leftImage").src = "imgs/Red-Cross-Emblem.png";
     document.getElementById("rightImage").src = "imgs/blue-cross-blue-shield-logo-vector.webp";
 }
